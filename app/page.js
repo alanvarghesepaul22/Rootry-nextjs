@@ -6,7 +6,9 @@ import { getServerSession } from "next-auth";
 
 export default async function Home() {
   const session = await getServerSession(NextAuthOptions);
-  if (session) return redirect("/home");
+  if (session) {
+    redirect("/home");
+  }
 
   return (
     <div className="mt-24">

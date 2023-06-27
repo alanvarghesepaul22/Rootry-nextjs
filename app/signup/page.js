@@ -1,12 +1,19 @@
-import SignUpForm from '@/components/signup/SignUpForm'
-import React from 'react'
+import SignUpForm from "@/components/signup/SignUpForm";
+import React from "react";
+import { getServerSession } from "next-auth";
+import { NextAuthOptions } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
-const SignUp = () => {
+const SignUp = async () => {
+  const session = await getServerSession(NextAuthOptions);
+  if (session) {
+    redirect("/home");
+  }
   return (
     <div>
-        <SignUpForm/>
+      <SignUpForm />
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

@@ -1,6 +1,5 @@
-import User from "../../models/user";
+import User from "@/models/User";
 import dbConnect from "../../config/dbConnect";
-
 
 export default async function handler(req, res) {
   if (req.method === "POST") {

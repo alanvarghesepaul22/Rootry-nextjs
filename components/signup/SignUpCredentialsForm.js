@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+import { redirect, useRouter } from "next/navigation";
 
 const SignUpCredentialsForm = () => {
   const [error, setError] = useState(null);
+  const router = useRouter();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,10 +21,11 @@ const SignUpCredentialsForm = () => {
       });
 
       console.log(data);
+      if (data) {
+       router.push("/login");
+      }
     } catch (error) {
       console.log(error);
-      console.log("Ithaanu error");
-      
     }
   };
 

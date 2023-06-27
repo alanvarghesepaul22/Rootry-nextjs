@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const CredentialsForm = async () => {
+const CredentialsForm = () => {
   const router = useRouter();
   const [error, setError] = useState(null);
   const [email, setEmail] = useState("");
@@ -23,7 +23,9 @@ const CredentialsForm = async () => {
     if (signInResponse && !signInResponse.error) {
       router.push("/home");
     } else {
-      setError("Your Email or Password is wrong!");
+      // console.log('login error');
+
+      setError("log error");
     }
   };
 
@@ -46,7 +48,7 @@ const CredentialsForm = async () => {
         />
         <input
           type="password"
-          name="passwoord"
+          name="password"
           placeholder="Password"
           required
           className="px-4 my-2 py-2 w-4/5 outline-0 shadow-sm rounded"
@@ -61,7 +63,10 @@ const CredentialsForm = async () => {
         </button>
         <div className="text-center">
           <p>
-            Not a member? <Link href="/register">Register</Link>
+            Not a member?{" "}
+            <Link href="/signup" as={"/signup"}>
+              Register
+            </Link>
           </p>
         </div>
       </form>

@@ -24,7 +24,7 @@ const HomeBanner = () => {
       </div>
 
       <div className="w-auto h-auto">
-        <Image src="/bannerImage.png" width={600} height={300} />
+        <Image src="/bannerImage.png" alt="Banner" width={600} height={300} />
       </div>
     </div>
   );
