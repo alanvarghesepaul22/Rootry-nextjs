@@ -1,8 +1,6 @@
 import React from "react";
 import GoogleButton from "../login/GoogleButton";
 import SignUpCredentialsForm from "./SignUpCredentialsForm";
-import { redirect } from "next/navigation";
-import { NextAuthOptions } from "@/lib/auth";
 
 const SignUpForm = () => {
   return (
@@ -12,7 +10,7 @@ const SignUpForm = () => {
           <h1 className="text-black font-semibold text-2xl mt-1">
             Register your Account
           </h1>
-          <p className="text-gray my-2">
+          <p className="text-grey my-2">
             Signup now and gey full access to our website
           </p>
         </div>

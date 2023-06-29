@@ -6,10 +6,10 @@ const HomeBanner = () => {
   return (
     <div className="w-full flex justify-center items-center ">
       <div className="w-3/6 px-10">
-        <h1 className="text-black font-semibold text-5xl my-4">
+        <h1 className="text-black font-semibold text-3xl my-4">
           Discover your family story
         </h1>
-        <p className="text-gray text-2xl my-4">
+        <p className="text-grey text-xl my-4">
           Grow your family tree, find new relatives, and explore other
           trees.Expand your family tree, uncover new relatives, and explore the
           intricacies of other ancestral lineages.
@@ -24,7 +24,7 @@ const HomeBanner = () => {
       </div>
 
       <div className="w-auto h-auto">
-        <Image src="/bannerImage.png" alt="Banner" width={600} height={300} />
+        <Image src="/bannerImage.png" alt="Banner" width={500} height={300} />
       </div>
     </div>
   );

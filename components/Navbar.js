@@ -39,6 +39,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", setShadow);
     };
   }, []);
+  
   if (!session && !loading) {
     return (
       <>
@@ -95,7 +96,7 @@ const Navbar = () => {
         <div>
           <div className="flex">
             <Link
-              href="#"
+              href="/search-tree"
               className="text-black px-9 py-2 text-lg font-medium hover:text-blue-600"
             >
               Search
@@ -112,16 +113,16 @@ const Navbar = () => {
                 <div className="absolute z-10 mt-4 w-56 shadow-lg overflow-hidden rounded border-2 border-slate-100 bg-white">
                   <div className="w-full ">
                     <Link
-                      href="#"
+                      href="/create-tree"
                       className="px-5 py-3 flex items-start hover:bg-light-white border-b-2 border-slate-100 rounded"
                     >
-                      Hello
+                      Create Tree
                     </Link>
                     <Link
-                      href="#"
+                      href="/tree"
                       className="px-5 py-3 flex items-start  hover:bg-light-white border-b-2 border-slate-100 rounded"
                     >
-                      Hellohia
+                      Your Trees
                     </Link>
                   </div>
                 </div>
@@ -142,13 +143,19 @@ const Navbar = () => {
                       href="#"
                       className="px-5 py-3 flex items-start hover:bg-light-white border-b-2 border-slate-100 rounded"
                     >
-                      Hello
+                      What's New?
                     </Link>
                     <Link
                       href="#"
                       className="px-5 py-3 flex items-start  hover:bg-light-white border-b-2 border-slate-100 rounded"
                     >
-                      Hellohia
+                      Family Records
+                    </Link>
+                    <Link
+                      href="#"
+                      className="px-5 py-3 flex items-start  hover:bg-light-white border-b-2 border-slate-100 rounded"
+                    >
+                      Build your family tree
                     </Link>
                   </div>
                 </div>
@@ -170,7 +177,7 @@ const Navbar = () => {
               <div className="absolute z-10 mt-4 w-fit shadow-lg overflow-hidden rounded border-2 border-slate-100 bg-white">
                 <div className="w-full ">
                   <Link
-                    href="#"
+                    href="/profile"
                     className="px-5 py-3 flex items-start hover:bg-light-white border-b-2 border-slate-100 rounded"
                   >
                     {session.user.name}

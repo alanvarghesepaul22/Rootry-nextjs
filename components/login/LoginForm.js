@@ -17,7 +17,7 @@ const LoginForm = async () => {
           <h1 className="text-black font-semibold text-2xl mt-1">
             Login to your Account
           </h1>
-          <p className="text-gray my-2">
+          <p className="text-grey my-2">
             Get started with our app, just create an account and enjoy the
             experience
           </p>
